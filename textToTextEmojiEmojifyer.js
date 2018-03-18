@@ -1,12 +1,12 @@
-var text;
-var textTurnedTextEmoji;
-
 function textToTextEmoji(text) {
-  console.log(": " + text + " :");
-  textTurnedTextEmoji = ": " + text + " :";
+  var textReplaced = text.replace(/\s/g, "_");
+  return ":" + textReplaced + ":";
 }
 
-text = "Estou fodido";
-textToTextEmoji(text);
+var result = textToTextEmoji("fodido")
+var resultWithSpace = textToTextEmoji("estou fodido");
+var resultWithSeveralSpaces =  textToTextEmoji("estou bastante fodido");
 
-console.log(textTurnedTextEmoji);
+console.log(result);
+console.log(resultWithSpace);
+console.log(resultWithSeveralSpaces);
